@@ -1,0 +1,57 @@
+
+{
+
+    "EmpId": "ind-4569987",
+   
+    "JobDetails": 
+      
+        {
+          "ProjectName": "ProjectName", 
+          "Designation": "Designation", 
+          "DesignationCode": 345, 
+          "Manager": true, 
+          "GradeLevel": 2, 
+          "IpAddress": "10.34.56.23", 
+          "TeamDetails": {
+                "TeamName": "TeamName",
+                "TeamContacts":[
+                  {
+                   "Name": "name", 
+                   "Mobile": "9098766659", 
+                   "Designation": "designation" 
+                },
+                {
+                  "Name": "name", 
+                  "Mobile": "9854456787", 
+                  "Designation": "designation" 
+               }
+              ]
+          }, 
+         "WorkFromHomeAllowed": true,
+         "Website": "smfId",
+         "MeetingURL": "msfAddr",
+         "ContactDetails": {
+             "SkypeId": "skypeId",
+             "MailId": "mailId"
+          }
+        },
+          
+       
+       "SkillSet": 
+       {
+            "Skills": {
+               "Programming": ["cpp","java", "python", "go"],
+               "Management": ["scrum", "pmp", "presentation"]
+            },
+            "Projects": 
+            [
+                "telecom billing",
+                "microservice",
+                "Database"
+            ]
+       }
+}
+
+
+
+

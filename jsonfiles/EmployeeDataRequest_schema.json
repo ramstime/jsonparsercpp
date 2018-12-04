@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "employee get request",
+  "description": "employee data query request",
+  "type": "object",
+  "required": ["RequesterId","RequesterType", "EmpId"],
+  "properties": {
+     "RequesterId": {
+        "description": "contains emp area code with ID",
+        "type": "string",
+        "minLength": 1
+        
+     },
+     "RequesterType": {
+        "description": "requester's type 'hr' or 'emp'",
+        "type":"string",
+        "enum": ["HR", "EMP"]
+     },
+     "EmpId": {
+        "description": "emp ID",
+        "type": "string",
+        "minLength": 1
+        
+        
+     }
+  }
+}
+

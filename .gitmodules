@@ -1,0 +1,3 @@
+[submodule "StaticJSON"]
+	path = StaticJSON
+	url = https://github.com/netheril96/StaticJSON.git

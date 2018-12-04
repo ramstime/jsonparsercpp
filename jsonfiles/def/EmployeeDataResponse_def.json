@@ -1,0 +1,98 @@
+
+[
+
+    {
+       "name": "TeamContacts",
+       "namespace":"apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+        [
+           ["std::string", "mName", {"required": true, "json_key": "Name"} ],
+           ["std::string", "mMobile", {"required": false, "json_key": "Mobile"} ],
+           ["std::string", "mDesignation", {"required": true, "json_key": "Designation"} ]
+        ]
+    },
+    
+    {
+       "name": "TeamDetails",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+        [
+           ["std::string", "mTeamName", {"required": true, "json_key": "TeamName"} ],
+           ["std::vector<TeamContacts>", "mTeamContacts", {"required": true, "json_key": "TeamContacts"} ]
+    
+        ]
+    },
+    {
+       "name": "ContactDetails",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+        [
+           ["std::string", "mSkypeId", {"required": true, "json_key": "SkypeId"} ],
+           ["std::string", "mMailId", {"required": true, "json_key": "MailId"} ]
+        ]
+    },
+    {
+       "name": "JobDetails",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+        [
+           ["std::string", "mProjectName" , {"required": true, "json_key": "ProjectName"}],
+           ["std::string", "mDesignation" , {"required": true, "json_key": "Designation"}],
+           ["uint32_t", "mDesignationCode", {"required": true, "json_key": "DesignationCode"}],
+           ["bool", "mManager" , {"required": true, "json_key": "Manager"}],
+           ["int", "mGradeLevel" , {"required": true, "json_key": "GradeLevel"}],
+           ["std::string", "mIpAddress" , {"required": true, "json_key": "IpAddress"}],
+           ["TeamDetails", "mTeamDetails" , {"required": true, "json_key": "TeamDetails"} ],
+           ["bool", "mWorkFromHomeAllowed", {"required": true, "json_key": "WorkFromHomeAllowed"} ],
+           ["std::string", "mWebsite" , {"required": false, "json_key": "Website"}],
+           ["std::string", "mMeetingURL" , {"required": false, "json_key": "MeetingURL"} ],
+           ["ContactDetails", "mContactDetails" , {"required": true, "json_key": "ContactDetails"} ]
+           
+        ]
+    },
+    {
+       "name": "Skills",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+       [
+          ["std::vector<std::string>", "mProgramming", {"required": true, "json_key": "Programming"} ],
+          ["std::vector<std::string>", "mManagement", {"required": true, "json_key": "Management"} ]
+       ]
+    },
+    {
+       "name": "SkillSet",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+       [
+          ["Skills", "mSkills", {"required": true, "json_key": "Skills"} ],
+          ["std::vector<std::string>", "mProjects", {"required": false, "json_key": "Projects"}]
+       ]
+    },
+    {
+       "name": "EmployeeDataResponse",
+       "namespace": "apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+       [
+           ["std::string", "mEmpId", {"required": true, "json_key": "EmpId"}],
+           ["JobDetails", "mJobDetails", {"required": true, "json_key": "JobDetails"} ],
+           ["SkillSet", "mSkillSet", {"required": true, "json_key": "SkillSet"}]
+       ]
+    }
+    
+    ]
+    
+    

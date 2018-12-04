@@ -1,0 +1,164 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"title": "employee info ",
+	"description": "epployee details query response",
+	"type": "object",
+	"properties": {
+	  "EmpId": {
+		"description": "employee id",
+		"type": "string"
+	  },
+	  "JobDetails": {
+		"description": "all job information",
+		"type": "object",
+		"required": [
+		  "ProjectName",
+		  "Designation",
+		  "DesignationCode",
+		  "Manager",
+		  "GradeLevel",
+		  "IpAddress",
+		  "TeamDetails",
+		  "ContactDetails"
+		  ],
+		"properties": {
+		  "ProjectName": {
+			"type": "string"
+		  },
+		  "Designation": {
+			"type": "string"
+		  },
+		  "DesignationCode": {
+			"type": "number"
+		  },
+		  "Manager": {
+			"type": "boolean"
+		  },
+		  "GradeLevel": {
+			"type": "integer",
+			"enum": [
+			  0,
+			  1,
+			  2,
+			  3
+			]
+		  },
+		  "IpAddress": {
+			"type": "string",
+			"anyOf": [
+			  {
+				"format": "ipv4"
+			  },
+			  {
+				"format": "ipv6"
+			  }
+			]
+		  },
+		  "workFromHomeAllowed": {
+			"type": "boolean"
+		  },
+		  "website": {
+			"type": "string",
+			"format": "uri"
+		  },
+		  "meetingURL": {
+			"type": "string",
+			"format": "uri"
+		  },
+		  "TeamDetails": {
+			"description": "all team information",
+			"type": "object",
+			"required": [
+			  "TeamName",
+			  "TeamContacts"
+			],
+			"properties": {
+			  "TeamName": {
+				"type": "string"
+			  },
+			  "TeamContacts": {
+				"description": "team contacts",
+				"type": "array",
+				"minItems": 1,
+				"items": {
+				  "description": "Team contact details",
+				  "type": "object",
+				  "required": [
+					"Name",
+					"Mobile",
+					"Designation"
+				  ],
+				  "properties": {
+					"Name": {
+					  "type": "string"
+					},
+					"Mobile": {
+					  "type": "string"
+					},
+					"Designation": {
+					  "type": "string"
+					}
+				  }
+				}
+			  }
+			}
+		  },
+		  "ContactDetails": {
+			"description": "contactDetails",
+			"type": "object",
+			"required": [
+			  "SkypeId",
+			  "MailId"
+			],
+			"properties": {
+			  "SkypeId": {
+				"type": "string"
+			  },
+			  "MailId": {
+				"type": "string"
+			  }
+			}
+		  }
+		}
+	  },
+	  "SkillSet": {
+		"description": "project details info",
+		"type": "object",
+		"properties": {
+		  "Skills": {
+			"description": "software skills",
+			"type": "object",
+			"required": [
+			  "Programming",
+			  "Management"
+			],
+			"properties": {
+			  "Programming": {
+				"type": "array",
+				"minItems":1,
+				"items":{
+					"type": "string"
+				  }
+			  },
+			  "Management": {
+				"type": "array",
+				"minItems":1,
+				"items":{
+					"type": "string"
+				}
+			  }
+			}
+		  },
+		  "Projects": {
+			"description": "list of projects",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+			  "type": "string"
+			},
+			"uniqueItems": true
+		  }
+		}
+	  }
+	}
+  }

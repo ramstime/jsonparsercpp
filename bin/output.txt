@@ -1,0 +1,53 @@
+Trying to parse datarequest:
+trying to open file: ../jsonfiles/EmployeeDataRequest_schema.json
+Load schema success: ../jsonfiles/EmployeeDataRequest_schema.json
+trying to open file: ../jsonfiles/EmployeeDataRequest.json
+
+parse successfully:
+RequesterId:abcd987
+RequesterType:HR
+EmpId:ind7765
+
+Trying to parse dataresp:
+trying to open file: ../jsonfiles/EmployeeDataResponse_schema.json
+Load schema success: ../jsonfiles/EmployeeDataResponse_schema.json
+trying to open file: ../jsonfiles/EmployeeDataResponse.json
+
+parse successfully:
+EmpId:ind-4569987
+JobDetails:ProjectName:ProjectName
+Designation:Designation
+DesignationCode:345
+Manager:1
+GradeLevel:2
+IpAddress:10.34.56.23
+TeamDetails:TeamName:TeamName
+TeamContacts:Name:name
+Mobile:9098766659
+Designation:designation
+
+TeamContacts:Name:name
+Mobile:9854456787
+Designation:designation
+
+
+WorkFromHomeAllowed:1
+Website:smfId
+MeetingURL:msfAddr
+ContactDetails:SkypeId:skypeId
+MailId:mailId
+
+
+SkillSet:Skills:Programming:cpp
+Programming:java
+Programming:python
+Programming:go
+Management:scrum
+Management:pmp
+Management:presentation
+
+Projects:telecom billing
+Projects:microservice
+Projects:Database
+
+

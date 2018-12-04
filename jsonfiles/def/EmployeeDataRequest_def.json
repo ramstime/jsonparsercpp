@@ -1,0 +1,15 @@
+[
+    {
+       "name": "EmployeeDataRequest",
+       "namespace":"apiDataMsp",
+       "parse_mode": "strict",
+       "no_duplicates": "true",
+       "members":
+        [
+            ["std::string", "mRequesterId", {"required": true, "json_key": "RequesterId"} ],
+            ["std::string", "mRequesterType", {"required": true, "json_key": "RequesterType"} ],
+            ["std::string", "mEmpId", {"required": false, "json_key": "EmpId"} ]
+        ]
+    }
+    ]
+    
