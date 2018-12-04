@@ -1,6 +1,7 @@
 
+# Use this package for generating the json C++ header files and Json decoder library
 
-#generate the cpp header files for json files with fallowing command
+# generate the cpp header files for json files with fallowing command
 
 ./generateCode.py --jsonpath ./jsonfiles/def/ --stjsonpath ./StaticJSON/ --incpath ./inc/
 
